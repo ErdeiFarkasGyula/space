@@ -28,7 +28,7 @@ function betolt() {
 function kartyakLetrehozasa(data) {
     data.people.forEach(ember => {
         const kartya = document.createElement("div");
-        kartya.classList.add("kartya");
+        kartya.classList.add("card");
         kartya.innerHTML = `
             <h2>${ember.name}</h2>
             <p>Űrállomás: ${ember.craft}</p>
@@ -56,7 +56,7 @@ function toltoJelzoEltuntetese() {
 function szuroKezeles() {
     const valasztottAllomas = szuro.value;
 
-    const kartyak = document.querySelectorAll(".kartya");
+    const kartyak = document.querySelectorAll(".card");
 
     kartyak.forEach(kartya => {
         const allomas = kartya.querySelector("p").innerText.split(": ")[1];
