@@ -30,7 +30,7 @@ function betolt() {
             szamMegjelenito.innerText = `${data.number} fő tartózkodik`;
         })
         .catch(error => {
-            allapot.innerText = "Hiba történt az adatok betöltése során.";
+            allapot.innerText = "Hiba történt az adatok betöltése során: " + error.message;
         });
 }
 
