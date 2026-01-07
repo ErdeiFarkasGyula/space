@@ -1,8 +1,8 @@
-const kartyaTarto = document.getElementById("kartyaTarto");
-const szamMegjelenito = document.getElementById("szamMegjelenito");
-const szuro = document.getElementById("szuro");
-const betoltesJelzo = document.getElementById("betoltesJelzo");
-const hibaJelzo = document.getElementById("hibaJelzo");
+const kartyaTarto = document.getElementById("cards");
+const szamMegjelenito = document.getElementById("hanyFo");
+const szuro = document.getElementById("station-filter");
+const betoltesJelzo = document.getElementById("spinner");
+const hibaJelzo = document.getElementById("error");
 
 let urallomasok = [];
 
