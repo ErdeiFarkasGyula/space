@@ -1,0 +1,12 @@
+#toltes {
+    display: none;
+    font-size: 80px;
+    text-align: center;
+    margin: 20px 0;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
