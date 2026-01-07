@@ -1,6 +1,7 @@
 const kartyaTarto = document.getElementById("kartyaTarto");
 const szamMegjelenito = document.getElementById("szamMegjelenito");
 const szuro = document.getElementById("szuro");
+const allapot = document.getElementById("állapot");
 
 let urallomasok = [];
 
@@ -27,6 +28,9 @@ function betolt() {
             });
 
             szamMegjelenito.innerText = `${data.number} fő tartózkodik`;
+        })
+        .catch(error => {
+            allapot.innerText = "Hiba történt az adatok betöltése során.";
         });
 }
 
