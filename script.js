@@ -1,8 +1,8 @@
 const kartyaTarto = document.getElementById("kartyaTarto");
 const szamMegjelenito = document.getElementById("szamMegjelenito");
 const szuro = document.getElementById("szuro");
-const toltes = document.getElementById("toltes");
-const allapot = document.getElementById("hiba");
+const betoltesJelzo = document.getElementById("betoltesJelzo");
+const hibaJelzo = document.getElementById("hibaJelzo");
 
 let urallomasok = [];
 
@@ -21,7 +21,7 @@ function betolt() {
             szamMegjelenito.innerText = `${data.number} fő tartózkodik`;
         })
         .catch(error => {
-            allapot.innerText = "Hiba történt az adatok betöltése során: " + error.message;
+            hibaJelzo.innerText = "Hiba történt az adatok betöltése során: " + error.message;
         });
 }
 
@@ -46,11 +46,11 @@ function kartyakLetrehozasa(data) {
 }
 
 function toltoJelzoMegjelenitese() {
-    toltes.style.display = "block";
+    betoltesJelzo.style.display = "block";
 }
 
 function toltoJelzoEltuntetese() {
-    toltes.style.display = "none";
+    betoltesJelzo.style.display = "none";
 }
 
 function szuroKezeles() {
@@ -60,7 +60,7 @@ function szuroKezeles() {
 
     kartyak.forEach(kartya => {
         const allomas = kartya.querySelector("p").innerText.split(": ")[1];
-        if (allomas === valasztottAllomas || valasztottAllomas === "" || valasztottAllomas === "all") {
+        if (valasztottAllomas === "all" || allomas === valasztottAllomas || valasztottAllomas === "") {
             kartya.style.display = "block";
         } else {
             kartya.style.display = "none";
